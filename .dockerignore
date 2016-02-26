@@ -1,0 +1,7 @@
+build.sh
+dbdata
+.git
+.gitignore
+LICENSE
+*.md
+run_example.sh
