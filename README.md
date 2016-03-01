@@ -28,7 +28,7 @@ From [its own website](http://dradisframework.org/):
 
 ##### Run Dradis
 
-You need to set the `/dbdata` volume path and the `SECRET_KEY_BASE` environment variable:
+You need to set the `/dbdata` volume path:
 
     $ docker run -ti \
         --publish 3000:3000 \
