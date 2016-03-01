@@ -30,7 +30,7 @@ From [its own website](http://dradisframework.org/):
 
 You need to set the `/dbdata` volume path:
 
-    $ docker run -ti \
+    $ docker run \
         --publish 3000:3000 \
         --volume "$(pwd)/dbdata:/dbdata" \
       zuazo/dradis
