@@ -3,4 +3,4 @@
 
 source 'https://rubygems.org'
 
-gem 'dockerspec', git: 'https://github.com/zuazo/dockerspec.git'
+gem 'dockerspec', '~> 0.3.0'

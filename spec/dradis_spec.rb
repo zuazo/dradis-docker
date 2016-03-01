@@ -1,4 +1,3 @@
-require 'dockerspec'
 require 'dockerspec/serverspec'
 require 'dockerspec/infrataster'
 
@@ -9,8 +8,9 @@ describe docker_build('.', tag: 'zuazo/dradis') do
 
   describe docker_build('spec/', tag: 'zuazo/dradis_test') do
     docker_env = { 'SECRET_KEY_BASE' => 'secret' }
-    describe docker_run('zuazo/dradis_test', env: docker_env) do
-      before(:all) { sleep(10) } if ENV['TRAVIS']
+    wait = ENV['TRAVIS'] ? 10 : 2
+
+    describe docker_run('zuazo/dradis_test', env: docker_env, wait: wait) do
 
       describe package('nodejs') do
         it { should be_installed }
