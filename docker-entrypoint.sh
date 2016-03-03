@@ -7,7 +7,7 @@ SECRET_KEY_BASE="${SECRET_KEY_BASE:-$(rake secret)}"
 export SECRET_KEY_BASE
 
 cp -n /opt/dradis/db/production.sqlite3 /dbdata/
-chown -R dradis:dradis /dbdata/
+chown -R dradis /dbdata/
 chmod -R u+w /dbdata/
 
 if [ -z "${*}" ]
